@@ -1,4 +1,4 @@
-package src.main.lesson1;
+package src.main.lecture_2;
 
 /**
  * First JAVA program.
@@ -28,9 +28,9 @@ public class FirstApp {
         int c = a + b;
         System.out.println("-----------------Задание №2-----------------");
         if (c >= 0) {
-            System.out.println("Положительная сумма");
+            System.out.println("Сумма положительная");
         } else {
-            System.out.println("Отрицательная сумма");
+            System.out.println("Сумма отрицательная");
         }
     }
     /** Задание №3 Создайте метод printColor() в теле которого задайте int переменную value и инициализируйте ее любым значением.
