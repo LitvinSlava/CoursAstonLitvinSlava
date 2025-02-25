@@ -1,8 +1,10 @@
 package src.main.lecture_4;
 
-/** Задание №3 Создать класс Park с внутренним классом, с помощью объектов
- которого можно хранить информацию об аттракционах, времени их
- работы и стоимости.**/
+/**
+ * Задание №3 Создать класс Park с внутренним классом, с помощью объектов
+ * которого можно хранить информацию об аттракционах, времени их
+ * работы и стоимости.
+ **/
 
 public class Park {
     private String name;
@@ -29,12 +31,14 @@ public class Park {
             this.workTime = workTime;
             this.price = price;
         }
-        public void printInfo() {
+
+        public void printAttractionInfo() {
             System.out.println("Аттракцион: " + name);
             System.out.println("Стоимость: " + price + " руб.");
             System.out.println("Время работы: " + workTime);
         }
     }
+
     public void printParkInfo() {
         System.out.println("Парк: " + name);
         System.out.println("Местоположение: " + location);
