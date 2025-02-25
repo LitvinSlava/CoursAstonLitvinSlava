@@ -1,4 +1,4 @@
-package src.main.lesson2;
+package src.main.lecture_3;
 import java.util.Arrays;
 
 public class Exercise3 {
