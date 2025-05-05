@@ -1,35 +1,31 @@
 package src.main.lecture_6;
+import java.io.*;
 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Лекция 6 задание 2");
+         /*Задание №1 Реализовать сохранение данных в csv файл
+           Задание №2 Реализовать загрузку данных из csv файла. Файл читается целиком.*/
 
+        // 1. Создаем тестовые данные
+        String[] header = {"Value 1", "Value 2", "Value 3"};
+        int[][] data = {
+                {100, 200, 123},
+                {300, 400, 500}
+        };
+        AppData appData = new AppData(header, data);
 
-/*         Задание №1 Реализовать сохранение данных в csv файл:
-                Подготовка реализации:
-                AppData.java   - Класс для хранения данных
-                CsvWriter.java - Класс для записи в CSV
-                CsvReader.java - Класс для чтения из CSV
-                Main.java      - запуск*/
+        // 2. Экспортируем в файл
+        DataExporter exporter = new CsvExporter("data/exportData.csv");
+        appData.exportData(exporter);
 
-
-          /*Задание №2 Реализовать загрузку данных из csv файла. Файл читается целиком.
-                Структура csv файла:
-                - Строка заголовок с набором столбцов
-                - Набор строк с целочисленными значениями
-                - Разделитель между столбцами - символ точка с запятой (;)
-                Пример:
-                Value 1 = 100 и 300
-                Value 2 = 200 и 400
-                Value 3 = 123 и 500
-                Для хранения данных использовать класс вида:
-                public class AppData {
-                 private String[] header;
-                 private int[][] data;
-                 // ...
-                }
-                Если выполняется save(AppData data), то старые данные в файле
-                полностью перезаписываются. (;)*/
+        // 3. Импортируем из файла
+        try {
+            DataImporter importer = new CsvImporter("data/importData.csv");
+            AppData importedData = AppData.importData(importer);
+        } catch (IOException e) {
+            System.err.println("Import failed: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
