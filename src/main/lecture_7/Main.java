@@ -20,6 +20,8 @@ public class Main {
                 {"13", "14", "15", "text"} // Ошибка здесь
         };
 
+        String[][] invalidSizeArray = new String[3][4]; // Неверный размер (3x4)
+
         try {
             // Проверка корректного массива
             checkArraySize(validArray);
@@ -30,9 +32,17 @@ public class Main {
             checkArraySize(invalidArray);
             int sum1 = sumArrayValues(invalidArray);
             sumArrayValues(invalidArray);
+
         } catch (MyArraySizeException | MyArrayDataException e) {
             e.printStackTrace();
         }
+
+//        try {
+//        // Пример с неверным размером
+//        checkArraySize(invalidSizeArray); // Упадет здесь
+//    } catch (MyArraySizeException | MyArrayDataException e) {
+//        System.err.println("Ошибка: " + e.getMessage());
+//        }
     }
 }
 
