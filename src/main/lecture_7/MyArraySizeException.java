@@ -1,4 +1,7 @@
 package src.main.lecture_7;
 
-public class MyArraySizeException {
+class MyArraySizeException extends Exaption {
+    public MyArraySizeException(String message){
+        super(message);
+    }
 }
