@@ -17,5 +17,13 @@ public class WordCounter {
         for (String word : words) {
             wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
         }
+        // Выводим уникальные слова
+        System.out.println("Уникальные слова: " + wordCount.keySet());
+
+        // Выводим количество повторений для каждого слова
+        System.out.println("\nКоличество повторений:");
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 }
