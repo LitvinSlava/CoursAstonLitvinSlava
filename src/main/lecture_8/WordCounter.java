@@ -10,5 +10,12 @@ public class WordCounter {
                 "вишня", "арбуз", "слива", "киви", "персик",
                 "гранат", "лимон", "лайм", "груша", "яблоко"
         };
+        // Создаем HashMap для подсчета слов
+        Map<String, Integer> wordCount = new HashMap<>();
+
+        // Заполняем карту подсчета
+        for (String word : words) {
+            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        }
     }
 }
