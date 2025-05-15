@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+/*Задание №5. Нужно написать программу, которая будет принимать от
+пользователя ввод различных логинов. Как только пользователь введет
+пустую строку - программа должна прекратить приём данных от
+пользователя и вывести в консоль логины, начинающиеся на букву f
+(строчную).*/
+
 public class LoginFilter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
