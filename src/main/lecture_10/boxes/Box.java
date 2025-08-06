@@ -1,7 +1,6 @@
 package src.main.lecture_10.boxes;
 
-import lecture_10.fruits.Fruit;
-
+import src.main.lecture_10.fruits.Fruit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,16 +23,27 @@ public class Box<T extends Fruit> {
         return Math.abs(this.getWeight() - anotherBox.getWeight()) < 0.0001;
     }
 
-    public void pourTo(Box<T> destinationBox) {
+    // Переработанный метод pourTo с дополнительной проверкой типов
+    public <U extends Fruit> void pourTo(Box<U> destinationBox) {
         if (this == destinationBox) return;
 
+        // Проверка совместимости типов во время компиляции
         if (!fruits.isEmpty() && !destinationBox.fruits.isEmpty()) {
             if (!fruits.get(0).getClass().equals(destinationBox.fruits.get(0).getClass())) {
                 throw new IllegalArgumentException("Cannot mix different fruit types!");
             }
         }
 
-        destinationBox.fruits.addAll(this.fruits);
+        // Проверка возможности пересыпания с помощью дженериков
+        if (!fruits.isEmpty() && destinationBox.fruits.isEmpty()) {
+            // Если приемник пустой, можем пересыпать только если типы совместимы
+            if (!Fruit.class.isAssignableFrom(fruits.get(0).getClass())) {
+                throw new IllegalArgumentException("Incompatible fruit types!");
+            }
+        }
+
+        // Безопасное приведение типов
+        destinationBox.fruits.addAll((List<U>) new ArrayList<>(this.fruits));
         this.fruits.clear();
     }
 

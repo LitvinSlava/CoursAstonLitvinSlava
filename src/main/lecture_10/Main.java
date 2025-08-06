@@ -1,60 +1,83 @@
 package src.main.lecture_10;
 
-import lecture_10.fruits.Apple;
-import lecture_10.fruits.Orange;
-import lecture_10.boxes.Box;
+import src.main.lecture_10.boxes.Box;
+import src.main.lecture_10.fruits.Apple;
+import src.main.lecture_10.fruits.Fruit;
+import src.main.lecture_10.fruits.Orange;
 
 public class Main {
     public static void main(String[] args) {
-        // Create fruits
+        // Создаем фрукты
         Apple apple1 = new Apple();
         Apple apple2 = new Apple();
         Orange orange1 = new Orange();
         Orange orange2 = new Orange();
         Orange orange3 = new Orange();
 
-        // Create boxes
+        // Создаем коробки
         Box<Apple> appleBox = new Box<>();
         Box<Orange> orangeBox = new Box<>();
         Box<Apple> anotherAppleBox = new Box<>();
         Box<Orange> anotherOrangeBox = new Box<>();
+        Box<Fruit> fruitBox = new Box<>();
 
-        // Fill boxes
+        // Наполняем коробки
         appleBox.addFruit(apple1);
         appleBox.addFruit(apple2);
         orangeBox.addFruit(orange1);
         orangeBox.addFruit(orange2);
         orangeBox.addFruit(orange3);
 
-        // Display box info
-        System.out.println("Apple box: " + appleBox);
-        System.out.println("Orange box: " + orangeBox);
+        // Выводим информацию о коробках
+        System.out.println("Коробка с яблоками: " + appleBox);
+        System.out.println("Коробка с апельсинами: " + orangeBox);
         System.out.println();
 
-        // Compare boxes
-        System.out.println("Comparing boxes:");
-        System.out.println("Apple box vs orange box: " + appleBox.compare(orangeBox));
+        // Сравниваем коробки
+        System.out.println("Сравнение коробок:");
+        System.out.println("Яблоки vs апельсины: " + appleBox.compare(orangeBox));
         System.out.println();
 
-        // Pour fruits
-        System.out.println("Pouring apples:");
+        // Пересыпаем фрукты
+        System.out.println("Пересыпаем яблоки:");
         appleBox.pourTo(anotherAppleBox);
-        System.out.println("Original: " + appleBox);
-        System.out.println("Destination: " + anotherAppleBox);
+        System.out.println("Исходная: " + appleBox);
+        System.out.println("Приемник: " + anotherAppleBox);
         System.out.println();
 
-        System.out.println("Pouring oranges:");
+        System.out.println("Пересыпаем апельсины:");
         orangeBox.pourTo(anotherOrangeBox);
-        System.out.println("Original: " + orangeBox);
-        System.out.println("Destination: " + anotherOrangeBox);
+        System.out.println("Исходная: " + orangeBox);
+        System.out.println("Приемник: " + anotherOrangeBox);
         System.out.println();
 
-        // Try invalid pouring
-        try {
-            System.out.println("Trying to pour oranges to apples:");
-            anotherOrangeBox.pourTo(anotherAppleBox);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        // Пересыпаем в общую коробку
+        System.out.println("Пересыпаем яблоки в общую коробку:");
+        anotherAppleBox.pourTo(fruitBox);
+        System.out.println("Общая коробка: " + fruitBox);
+        System.out.println();
+
+        System.out.println("Пересыпаем апельсины в общую коробку:");
+        anotherOrangeBox.pourTo(fruitBox);
+        System.out.println("Общая коробка: " + fruitBox);
+        System.out.println();
+
+        // Демонстрация работы с пустыми коробками
+        System.out.println("Демонстрация пересыпания в пустую коробку:");
+        Box<Apple> newAppleBox = new Box<>();
+        Box<Fruit> newFruitBox = new Box<>();
+
+        // Создаем и наполняем временную коробку яблоками
+        Box<Apple> tempAppleBox = new Box<>();
+        tempAppleBox.addFruit(new Apple());
+        tempAppleBox.addFruit(new Apple());
+
+        System.out.println("Пересыпаем яблоки в пустую коробку для яблок:");
+        tempAppleBox.pourTo(newAppleBox);
+        System.out.println("Приемник: " + newAppleBox);
+
+        System.out.println("Пересыпаем яблоки в пустую общую коробку:");
+        tempAppleBox.pourTo(newFruitBox);
+        System.out.println("Приемник: " + newFruitBox);
     }
 }
