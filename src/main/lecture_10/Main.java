@@ -19,7 +19,8 @@ public class Main {
         Box<Orange> orangeBox = new Box<>();
         Box<Apple> anotherAppleBox = new Box<>();
         Box<Orange> anotherOrangeBox = new Box<>();
-        Box<Fruit> fruitBox = new Box<>();
+        Box<Fruit> fruitBox1 = new Box<>(); // Для яблок
+        Box<Fruit> fruitBox2 = new Box<>(); // Для апельсинов
 
         // Наполняем коробки
         appleBox.addFruit(apple1);
@@ -51,21 +52,20 @@ public class Main {
         System.out.println("Приемник: " + anotherOrangeBox);
         System.out.println();
 
-        // Пересыпаем в общую коробку
-        System.out.println("Пересыпаем яблоки в общую коробку:");
-        anotherAppleBox.pourTo(fruitBox);
-        System.out.println("Общая коробка: " + fruitBox);
+        // Пересыпаем в разные общие коробки
+        System.out.println("Пересыпаем яблоки в общую коробку 1:");
+        anotherAppleBox.pourTo(fruitBox1);
+        System.out.println("Общая коробка 1: " + fruitBox1);
         System.out.println();
 
-        System.out.println("Пересыпаем апельсины в общую коробку:");
-        anotherOrangeBox.pourTo(fruitBox);
-        System.out.println("Общая коробка: " + fruitBox);
+        System.out.println("Пересыпаем апельсины в общую коробку 2:");
+        anotherOrangeBox.pourTo(fruitBox2);
+        System.out.println("Общая коробка 2: " + fruitBox2);
         System.out.println();
 
         // Демонстрация работы с пустыми коробками
         System.out.println("Демонстрация пересыпания в пустую коробку:");
         Box<Apple> newAppleBox = new Box<>();
-        Box<Fruit> newFruitBox = new Box<>();
 
         // Создаем и наполняем временную коробку яблоками
         Box<Apple> tempAppleBox = new Box<>();
@@ -76,8 +76,16 @@ public class Main {
         tempAppleBox.pourTo(newAppleBox);
         System.out.println("Приемник: " + newAppleBox);
 
-        System.out.println("Пересыпаем яблоки в пустую общую коробку:");
-        tempAppleBox.pourTo(newFruitBox);
-        System.out.println("Приемник: " + newFruitBox);
+        // Демонстрация ошибки при пересыпании разных типов
+        try {
+            System.out.println("\nПопытка пересыпать апельсины в коробку с яблоками:");
+            Box<Orange> tempOrangeBox = new Box<>();
+            tempOrangeBox.addFruit(new Orange());
+
+            // Попытка пересыпать апельсины в коробку с яблоками
+            tempOrangeBox.pourTo(newAppleBox);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
     }
 }
