@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11">
-      <module name="CoursAstonLitvinSlava.app" target="21" />
-      <module name="CoursAstonLitvinSlava.app.main" target="21" />
-      <module name="CoursAstonLitvinSlava.app.test" target="21" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

@@ -1,5 +1,45 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# Билд-артефакты Gradle
+build/
+target/
 
-# Ignore Gradle build output directory
-build
+# Кэш и данные Gradle
+.gradle/
+.gradletasknamecache
+
+# Скомпилированные классы
+*.class
+
+# Архивные файлы
+*.jar
+*.war
+*.ear
+
+# Файлы логов
+*.log
+
+# Временные файлы
+*.tmp
+*.bak
+*.swp
+
+# Настройки IntelliJ IDEA
+.idea/
+.idea/shelf/
+*.iml
+out/
+
+# Настройки Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Локальные свойства
+local.properties
+
+# Прочие конфиги Gradle
+gradle-app.setting
+
+# При этом не игнорируем Wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
