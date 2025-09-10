@@ -1,1 +1,46 @@
-/out/production/CoursAstonLitvinSlava/src/main/lecture_6/
+
+# ����-��������� Gradle
+build/
+target/
+
+# ��� � ������ Gradle
+.gradle/
+.gradletasknamecache
+
+# ���������������� ������
+*.class
+
+# �������� �����
+*.jar
+*.war
+*.ear
+
+# ����� �����
+*.log
+
+# ��������� �����
+*.tmp
+*.bak
+*.swp
+
+# ��������� IntelliJ IDEA
+.idea/
+.idea/shelf/
+*.iml
+out/
+
+# ��������� Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# ��������� ��������
+local.properties
+
+# ������ ������� Gradle
+gradle-app.setting
+
+# ��� ���� �� ���������� Wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
