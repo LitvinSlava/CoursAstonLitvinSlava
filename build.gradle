@@ -9,10 +9,9 @@ repositories {
 
 dependencies {
     // JUnit 5 dependencies
-
-    testImplementation platform('org.junit:junit-bom:5.9.2')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     //Selenium WebDriver
     implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
