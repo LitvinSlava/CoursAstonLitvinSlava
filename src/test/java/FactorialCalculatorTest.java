@@ -1,4 +1,6 @@
-import Lecture_12.FactorialCalculator;
+import main.Lecture_12.FactorialCalculator;
+
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
