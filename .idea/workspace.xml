@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97514821-101c-48ca-aea8-abb3680f6942" name="Changes" comment="задание 3, для четвертой лекции" />
+    <list default="true" id="97514821-101c-48ca-aea8-abb3680f6942" name="Changes" comment="задание 3, для четвертой лекции">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/FactorialCalculatorTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +84,8 @@
     "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/anduser/IdeaProjects/CoursAstonLitvinSlava/src/test",
+    "jdk.selected.JAVA_MODULE": "17 (2)",
+    "last_opened_file_path": "C:/Users/anduser/IdeaProjects/CoursAstonLitvinSlava/src/test/java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -90,6 +94,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\test\java" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\test" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\main\Lecture_12" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava" />
@@ -106,14 +111,7 @@
       <recent name="src.main.lesson1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FactorialCalculatorTest">
-    <configuration name="LoginFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LoginFilter" />
-      <module name="CoursAstonLitvinSlava" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.Tests in 'CoursAstonLitvinSlava.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.lecture_10.Main" />
       <module name="CoursAstonLitvinSlava" />
@@ -127,28 +125,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortedString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.lecture_9.SortedString" />
-      <module name="CoursAstonLitvinSlava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.main.lecture_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Tests in 'CoursAstonLitvinSlava.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in CoursAstonLitvinSlava.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoursAstonLitvinSlava.app.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.lecture_9.StudentPool" />
-      <module name="CoursAstonLitvinSlava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.main.lecture_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in CoursAstonLitvinSlava.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoursAstonLitvinSlava.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in CoursAstonLitvinSlava.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoursAstonLitvinSlava.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,18 +180,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LoginFilter" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.SortedString" />
-      <item itemvalue="Application.StudentPool" />
+      <item itemvalue="Gradle.Tests in 'CoursAstonLitvinSlava.test'" />
       <item itemvalue="JUnit.FactorialCalculatorTest" />
+      <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test" />
+      <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test (1)" />
+      <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'CoursAstonLitvinSlava.test'" />
+        <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test (2)" />
+        <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test (1)" />
+        <item itemvalue="JUnit.All in CoursAstonLitvinSlava.test" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.StudentPool" />
-        <item itemvalue="Application.SortedString" />
-        <item itemvalue="Application.LoginFilter" />
       </list>
     </recent_temporary>
   </component>
@@ -300,6 +319,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.junit.platform.commons.JUnitException" package="org.junit.platform.commons" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

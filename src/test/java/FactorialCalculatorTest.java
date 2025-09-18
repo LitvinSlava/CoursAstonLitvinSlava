@@ -1,12 +1,11 @@
-import org.junit.jupiter.api.Test;
 import Lecture_12.FactorialCalculator;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.stream.Stream;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactorialCalculatorTest {
 
@@ -49,7 +48,6 @@ public class FactorialCalculatorTest {
                 () -> FactorialCalculator.factorial(input));
     }
 
-    // Тестирование граничных значений
     @Test
     void testFactorialEdgeCases() {
         assertAll(
