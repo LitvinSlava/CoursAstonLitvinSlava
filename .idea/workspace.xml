@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97514821-101c-48ca-aea8-abb3680f6942" name="Changes" comment="задание 3, для четвертой лекции">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/FactorialCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/FactorialCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/FactorialCalculatorTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +24,23 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CoursAstonLitvinSlava" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CoursAstonLitvinSlava" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
               </path>
             </expand>
             <select />
@@ -68,25 +79,27 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anduser/IdeaProjects/CoursAstonLitvinSlava/src/main/Lecture_12&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/anduser/IdeaProjects/CoursAstonLitvinSlava/src/test",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\test" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\main\Lecture_12" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\test\java" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\src\main" />
       <recent name="C:\Users\anduser\IdeaProjects\CoursAstonLitvinSlava\out\production\CoursAstonLitvinSlava" />
@@ -143,7 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactorialCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactorialCalculatorTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="CoursAstonLitvinSlava.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactorialCalculatorTest" />
@@ -161,7 +174,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FactorialCalculatorTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StudentPool" />
         <item itemvalue="Application.SortedString" />
