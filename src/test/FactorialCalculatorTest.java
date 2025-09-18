@@ -1,5 +1,13 @@
 import org.junit.jupiter.api.Test;
+import Lecture_12.FactorialCalculator;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.stream.Stream;
 
 public class FactorialCalculatorTest {
 
@@ -13,19 +21,20 @@ public class FactorialCalculatorTest {
         assertEquals(1, FactorialCalculator.factorial(1));
     }
 
-    @Test
-    void testFactorialOfTwo() {
-        assertEquals(2, FactorialCalculator.factorial(2));
-    }
-
-    @Test
-    void testFactorialOfThree() {
-        assertEquals(6, FactorialCalculator.factorial(3));
-    }
-
-    @Test
-    void testFactorialOfTen() {
-        assertEquals(3628800, FactorialCalculator.factorial(10));
+    @ParameterizedTest
+    @CsvSource({
+            "2, 2",
+            "3, 6",
+            "4, 24",
+            "5, 120",
+            "6, 720",
+            "7, 5040",
+            "8, 40320",
+            "9, 362880",
+            "10, 3628800"
+    })
+    void testFactorialOfPositiveNumbers(int input, long expected) {
+        assertEquals(expected, FactorialCalculator.factorial(input));
     }
 
     @Test
@@ -34,13 +43,21 @@ public class FactorialCalculatorTest {
                 () -> FactorialCalculator.factorial(-1));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {-5, -10, -100})
+    void testFactorialThrowsForAllNegativeNumbers(int input) {
+        assertThrows(IllegalArgumentException.class,
+                () -> FactorialCalculator.factorial(input));
+    }
+
+    // Тестирование граничных значений
     @Test
-    void testFactorialThrowsForAllNegativeNumbers() {
+    void testFactorialEdgeCases() {
         assertAll(
-                () -> assertThrows(IllegalArgumentException.class,
-                        () -> FactorialCalculator.factorial(-5)),
-                () -> assertThrows(IllegalArgumentException.class,
-                        () -> FactorialCalculator.factorial(-10))
+                () -> assertEquals(1, FactorialCalculator.factorial(0)),
+                () -> assertEquals(1, FactorialCalculator.factorial(1)),
+                () -> assertEquals(2, FactorialCalculator.factorial(2)),
+                () -> assertEquals(3628800, FactorialCalculator.factorial(10))
         );
     }
 }

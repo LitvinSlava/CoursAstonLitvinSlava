@@ -1,3 +1,5 @@
+package Lecture_12;
+
 public class FactorialCalculator {
 
     public static long factorial(int n) {
