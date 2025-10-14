@@ -9,9 +9,9 @@ repositories {
 
 dependencies {
     // JUnit 5 dependencies
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     //Selenium WebDriver
     implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
@@ -23,6 +23,13 @@ dependencies {
 
 application {
     mainClass = 'org.example.App'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
 
 tasks.named('test') {

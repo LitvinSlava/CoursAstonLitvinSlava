@@ -1,46 +1,39 @@
-
-# ����-��������� Gradle
+# Билд артефакты Gradle
 build/
 target/
 
-# ��� � ������ Gradle
+# Кэш и данные Gradle
 .gradle/
 .gradletasknamecache
 
-# ���������������� ������
+# Скомпилированняе классы
 *.class
 
-# �������� �����
+# Архивные файлы
 *.jar
 *.war
 *.ear
 
-# ����� �����
+# Файлы логов
 *.log
 
-# ��������� �����
+# Временные файлы
 *.tmp
 *.bak
 *.swp
 
-# ��������� IntelliJ IDEA
+# Настройка IntelliJ IDEA
 .idea/
 .idea/shelf/
 *.iml
 out/
 
-# ��������� Eclipse
-.classpath
-.project
-.settings/
-bin/
-
-# ��������� ��������
+# Локальные свойства
 local.properties
 
-# ������ ������� Gradle
+# Прочие конфиги Gradle
 gradle-app.setting
 
-# ��� ���� �� ���������� Wrapper
+# При этом не игнорирует Wrapper
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
